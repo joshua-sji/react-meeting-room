@@ -1,0 +1,150 @@
+.container{
+    display: flex;
+    min-height: 100vh;
+    @media (max-width: 480px){
+        display: block;
+        height: auto;
+    }
+}
+
+.current-status,
+.upcoming-meetings{
+    flex-basis: 50%;
+    @media (max-width: 480px){
+        padding: 16px;
+    }
+}
+.current-status{
+    color: $white;
+    display: flex;
+    align-items: center;
+    padding: 64px;
+    &.open{
+        background: $green;
+    }
+    &.busy{
+        background: $red;
+    }
+    h1{
+        font-size: 80px;
+        line-height: 120px;
+    }
+    .list-group-item{
+        .badge{
+            color: $white;
+        }
+    }
+    @media (max-width: 768px){
+        padding: 48px;
+        h1{
+            font-size: 90px;
+        }
+    }
+    @media (max-width: 480px){
+        padding: 24px;
+        h1{
+            font-size: 64px;
+        }
+    }
+}
+
+.upcoming-meetings{
+    padding: 20px;
+    text-align: center;
+    @media (max-width: 768px){
+        padding: 48px;
+    }
+    @media (max-width: 480px){
+        padding: 24px;
+    }
+    h1{
+        margin: 0 0 24px 0;
+        @media (max-width: 480px){
+            font-size: 32px;
+        }
+    }
+}
+.list-group-item{
+    display: block;
+    padding: 16px 4px;
+    color: #4099ff;
+    line-height: 22px;
+    border-bottom: 1px solid #eee;
+    &:hover{
+        background: rgba(0,0,0,0.085);
+    }
+    &:last-child{
+        border-bottom: 0;
+    }
+    .badge{
+        color: $red;
+    }
+}
+.current-time{
+    margin: 15px 0 15px 0;
+    color: #999;
+    font-size: 25px;
+    text-align: center;
+    @media (max-width: 480px){
+        font-size: 22px;
+        margin: 0 0 32px 0;
+    }
+}
+
+.current-heading{
+    text-align: center;
+}
+
+.container-half{
+    flex-basis: 50%;
+}
+
+.primary-cta{
+    position: fixed;
+    right: 48px;
+    bottom: 48px;
+    background: $blue-dark;
+    border-radius: 4px;
+    color: $white;
+    font-size: 36px;
+    line-height: 48px;
+    height: 48px;
+    width: 48px;
+    text-align: center;
+    border-radius: 50%;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    @media (max-width: 480px){
+        right: 32px;
+        bottom: 32px;
+    }
+}
+
+.primary-cta.left {
+   left: 48px;
+}
+
+.empty{
+    margin: 64px 0;
+    text-align: center;
+    img{
+        display: block;
+        width: 100%;
+        max-width: 280px;
+        margin: 0 auto 32px auto;
+        opacity: 0.75;
+    }
+    h3{
+        font-size: 20px;
+        line-height: 28px;
+        opacity: 0.33;
+        font-weight: 400;
+    }
+    @media (max-width: 480px){
+        margin: 32px 0;
+    }
+}
+
+.loading{
+    margin: 128px 0;
+    text-align: center;
+}
